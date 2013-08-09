@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Azuru</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/easySlider1.5.js"></script>
+<script type="text/javascript" charset="utf-8">
+// <![CDATA[
+$(document).ready(function(){	
+	$("#slider").easySlider({
+		controlsBefore:	'<p id="controls">',
+		controlsAfter:	'</p>',
+		auto: true, 
+		continuous: true
+	});	
+});
+// ]]>
+</script>
+<script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".signin").click(function(e) {
+                e.preventDefault();
+                $("fieldset#signin_menu").toggle();
+                $(".signin").toggleClass("menu-open");
+            });
+
+            $("fieldset#signin_menu").mouseup(function() {
+                return false
+            });
+            $(document).mouseup(function(e) {
+                if($(e.target).parent("a.signin").length==0) {
+                    $(".signin").removeClass("menu-open");
+                    $("fieldset#signin_menu").hide();
+                }
+            });            
+
+        });
+</script>
+<style type="text/css">
+.logo {
+	float: left;
+	padding: 0;
+	margin: 0;
+
+}
+</style>
+</head>
+<body>
+<div class="main">
+	<div class="header">
+		<div class="block_header">
+			<div class="menu">
+				<ul>
+					<li></li>
+				</ul>
+			</div>
+		<div class="clr"> </div>
+	</div>
+</div>
+	<div class="body">
+		<div class="body_resize">
+			<div class="logo"><a href="http://azuru.net/stage"><img src="images/azurufinlogo.png" width="155" height="29" border="0" alt="logo" /></a></div>
+				<div class="form">
+					<form method="post" action="http://www.aweber.com/scripts/addlead.pl">
+						<input type="hidden" name="meta_web_form_id" value="YOUR_FORM_ID"/>
+						<input type="hidden" name="meta_split_id" value=""/>
+						<input type="hidden" name="unit" value="CAMPAIGN"/>
+						<input type="hidden" name="redirect" value="http://www.aweber.com/form/thankyou_vo.html" id=YOUR_ID_HERE"/>
+						<input type="hidden" name="meta_redirect_onlist" value=""/>
+						<input type="hidden" name="meta_adtracking" value=""/>
+						<input type="hidden" name="meta_message" value="1"/>
+						<input type="hidden" name="meta_required" value="name,from"/>
+						<input type="hidden" name="meta_forward_vars" value="0"/>
+							Name: <input type="text" class="formname" name="name" value="" size="20"/>
+							Email: <input type="text" class="formname" name="from" value="" size="20"/>
+						<input type="submit" class="sendform" name="submit" value="Go!"/>
+					</form>
+				</div>
+			</div>
+		</div>
+<div class="footer">
+	<div class="footer_resize">
+		<p class="leftt">© Azuru 2012. All Rights Reserved.</p>
+		<p class="rightt"></p>
+		<div class="clr"></div>
+	</div>
+	<div class="clr"></div>
+</div>
+</body>
+</html>
